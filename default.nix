@@ -1,4 +1,7 @@
-{pkgs, lib}: let
+{
+  pkgs,
+  lib,
+}: let
   nodejs = pkgs.nodejs_23;
   pnpm = pkgs.pnpm_10;
 in
@@ -12,6 +15,10 @@ in
       inherit (finalAttrs) pname version src;
       hash = "sha256-jSGMwMgFA9/zkI8p5nsuh8nXP3u5oj/RhIvKfHtFKqg=";
     };
+    buildPhase = ''
+      runHook preBuild
+      runHook postBuild
+    '';
     installPhase = ''
       runHook preInstall
       mkdir -p $out/{lib,bin}
