@@ -18,9 +18,9 @@ const server = createServer((conn) => {
           root(node) {
             // remove <pre> and <code>.
             const pre = node.children[0];
-            if (pre !== undefined && pre.tagName == "pre") {
+            if (pre !== undefined && pre.tagName === "pre") {
               const code = pre.children[0];
-              if (code !== undefined && code.tagName == "code") {
+              if (code !== undefined && code.tagName === "code") {
                 node.children = code.children;
               }
             }
