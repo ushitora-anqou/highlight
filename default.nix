@@ -2,7 +2,7 @@
   pkgs,
   lib,
 }: let
-  nodejs = pkgs.nodejs_23;
+  nodejs = pkgs.nodejs_24;
   pnpm = pkgs.pnpm_10;
 in
   pkgs.stdenv.mkDerivation (finalAttrs: {

@@ -2,7 +2,7 @@
   description = "Yet another highlight command for source highlighting, created for blog.anqou.net.";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-24.11";
+    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
   };
 
   outputs = {
