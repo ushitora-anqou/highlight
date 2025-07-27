@@ -13,6 +13,7 @@ in
     nativeBuildInputs = [nodejs pnpm.configHook];
     pnpmDeps = pnpm.fetchDeps {
       inherit (finalAttrs) pname version src;
+      fetcherVersion = 1;
       hash = "sha256-jSGMwMgFA9/zkI8p5nsuh8nXP3u5oj/RhIvKfHtFKqg=";
     };
     buildPhase = ''
